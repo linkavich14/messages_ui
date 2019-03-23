@@ -1,0 +1,31 @@
+<a
+  style="cursor:pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  (click)="selectedMessageItem()"
+  class="list-group-item list-group-item-action">
+  <div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">{{ message.senderName }}</h5>
+    <div *ngIf="message.daysDifference > 0; else todayBlock" >
+      <div *ngIf="message.daysDifference === 1; else daysBlock">
+        <small>{{ message.daysDifference }} day ago</small>
+      </div>
+      <ng-template #daysBlock>
+        <small>{{ message.daysDifference }} days ago</small>
+      </ng-template>
+    </div>
+    <ng-template #todayBlock>
+        <small>Today</small>
+    </ng-template>
+  </div>
+  <div class="message-group">
+    <p class="mb-1">{{ message.messageSubject }}</p>
+    <div *ngIf="message.acknowledge; else elseBlock" >
+        <i class="material-icons" >drafts</i>
+    </div>
+    <ng-template #elseBlock>
+        <i class="material-icons">mail</i>
+    </ng-template>
+  </div>
+  <small>{{ message.messageBody | slice:0:20 }}</small>
+</a>

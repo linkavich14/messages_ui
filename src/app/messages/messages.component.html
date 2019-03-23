@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-3 mobileList">
+    <div class="selectedCustomer hidden">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Selected Client or Party</h5>
+          <h6 class="card-subtitle text-muted">Some details about the user</h6>
+        </div>
+      </div>
+    </div>
+    <div class="search-inbox">
+      <app-messages-search ></app-messages-search>
+    </div>
+    <div class="messageList">
+      <app-messages-list></app-messages-list>
+    </div>
+  </div>
+  <div class="col mobileContent">
+    <router-outlet></router-outlet>
+  </div>
+</div>

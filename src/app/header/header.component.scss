@@ -1,0 +1,38 @@
+.header-nav {
+  background-color: #929fba!important;
+  text-align: left!important;
+  padding-top: 1rem!important;
+  padding-bottom: 0.001rem !important;
+  padding-left: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.new-message {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 0;
+  list-style: none;
+  width: fit-content;
+}
+
+.new-message:hover {
+  background-color: #a6acb4;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.iconPosition {
+  height: 16px;
+  line-height: 13px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+
+
+
+

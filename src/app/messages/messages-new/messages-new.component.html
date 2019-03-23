@@ -1,0 +1,24 @@
+<div>
+  <form>
+    <div class="container-message-new">
+        <div class="form-group to-group">
+          <div>
+            <button type="button" class="btn btn-secondary" (click)="showDialog()">To</button>
+          </div>
+          <div class="to-field">
+            <input type="email" class="form-control" id="toMessageField" aria-describedby="emailHelp" placeholder="To">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="subjectField" aria-describedby="subject" placeholder="Subject">
+        </div>
+        <div class="message-text-area">
+          <textarea class="form-control" rows="20" id="message"></textarea>
+        </div>
+    </div>
+    <div class="buttons-group">
+        <button type="button" class="btn btn-outline-dark contentButton">Send</button>
+        <button type="button" class="btn btn-outline-dark contentButton" (click)="cancelNewMessage()">Cancel</button>
+    </div>
+  </form>
+</div>

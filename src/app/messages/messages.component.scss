@@ -1,0 +1,39 @@
+.selectedCustomer {
+  padding-bottom: 15px;
+}
+
+.search-inbox {
+  padding-bottom: 15px;
+}
+
+.messageList {
+  overflow-y: auto;
+  height: 800px;
+}
+
+@media screen and (max-width: 736px) {
+  .mobileContent {
+    display: none;
+  }
+
+  .mobileList {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .messageList {
+    overflow-y: auto;
+    height: 600px;
+  }
+}
+
+@media screen and (max-height: 375px) and (orientation: landscape) {
+  .messageList {
+    overflow-y: auto;
+    height: 350px;
+  }
+}
+
+.hidden {
+  display: none;
+}

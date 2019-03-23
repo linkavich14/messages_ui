@@ -1,0 +1,20 @@
+<div class="message-container">
+  <div class="message-buttons">
+      <div class="rightIcons" >
+          <div (click)="onNewMessage()" class="new-message">
+              <i class="material-icons iconPosition">add</i>  New Message
+          </div>
+        <div (click)="onReplyMessage()" class="replyMessage">
+            <i class="material-icons iconPosition">reply</i> Reply
+        </div>
+        <div (click)="onAcknowledgeMessage()" class="nextIcons">
+            <i class="material-icons iconPosition">done_outline</i> Acknowledge
+        </div>
+      </div>
+  </div>
+  <div [class.hidden]="messageReplyDisplay">
+    <app-message-reply></app-message-reply>
+  </div>
+  <app-message-title></app-message-title>
+  <app-message-body></app-message-body>
+</div>

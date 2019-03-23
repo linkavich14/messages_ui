@@ -1,0 +1,29 @@
+.container-message-reply {
+  display: flex;
+  flex-direction: column;
+}
+
+.to-group {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.to-field {
+  padding-left: 5px;
+  flex-grow: 1;
+}
+
+.message-text-area {
+  flex: 2;
+  overflow: auto;
+}
+
+.buttons-group {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.contentButton {
+  margin-left: 10px;
+}

@@ -1,0 +1,13 @@
+.container-search {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.search-field {
+  padding-right: 5px;
+  flex-grow: 1;
+}
+
+.refbtn {
+  margin-left: 5px;
+}

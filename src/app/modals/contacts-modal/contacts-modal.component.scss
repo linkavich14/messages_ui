@@ -1,0 +1,31 @@
+h4, .h4 {
+  font-size: 1.0rem;
+}
+
+.DivWithScroll{
+  height:200px;
+  overflow-y: auto;
+}
+
+.search {
+  position: relative;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.search input {
+  width: 250px;
+  height: 32px;
+  border-radius: 5px;
+}
+
+.search input { text-indent: 32px;}
+.search .fa-search {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+}
+
+.contactSearch {
+  font-size: 25px;
+}

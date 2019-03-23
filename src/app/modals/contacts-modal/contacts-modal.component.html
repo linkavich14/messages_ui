@@ -1,0 +1,45 @@
+<div class="modal-header">
+  <h4 class="modal-title">Please select a destination for the message</h4>
+  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <!--Search for contacts-->
+  <form>
+    <div class="form-group form-inline search">
+      <span class="fa-search"><i class="material-icons contactSearch">search</i></span>
+      <input type="text" class="form-control ml-2" [formControl]="filter" placeholder="Search Contact" />
+    </div>
+  </form>
+  <!--Display filtered contacts in a table-->
+  <div class="DivWithScroll">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Surname</th>
+          <th scope="col">Name</th>
+          <th scope="col">Party No</th>
+          <th scope="col"><input type="checkbox" [(ngModel)]="selectAll" (change)="selectAllContacts();"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contacts$ | async; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ contact.surname }}</td>
+          <td>{{ contact.name }}</td>
+          <td>{{ contact.party }}</td>
+          <td><input type="checkbox"
+                     value= "{{ contact }}"
+                     [ngModel]="contact.selected"
+                     (change)="contactChanged(contact, $event);"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="sendContactsToMessageContent();">Ok</button>
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>

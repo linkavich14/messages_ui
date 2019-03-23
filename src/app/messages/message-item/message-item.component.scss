@@ -1,0 +1,29 @@
+.list-group-item {
+  padding: 0.40rem 1rem;
+  font-size: .85rem;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #a6acb4;
+  border-color: #a6acb4;
+}
+
+.mb-1, .my-1 {
+  margin-bottom: 0.10rem !important;
+}
+
+h5, .h5 {
+  font-size: 1.0rem;
+}
+
+.message-group {
+  display: flex;
+  justify-content: space-between !important;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}

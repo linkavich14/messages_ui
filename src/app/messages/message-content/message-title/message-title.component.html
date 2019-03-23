@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header">
+    {{ message.messageSubject }}
+  </div>
+  <div class="card-body">
+    <div class="card-text">
+        From: {{ message.senderMail }}
+        <br>
+        Received: {{ message.messageDateReceived }}
+        <br>
+        To: {{ message.receivers }}
+    </div>
+
+  </div>
+</div>
