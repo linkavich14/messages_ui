@@ -1,7 +1,29 @@
+<!--
 <div class="list-group">
   <app-message-item
     *ngFor="let messageItem of messages; let i = index"
     [message]="messageItem"
     [index]="i"
   ></app-message-item>
+</div>
+-->
+
+<div class="content-section implementation">
+  <p-table [value]="messages" selectionMode="single" [(selection)]="selectedMessage" dataKey="messageId" [tableStyle]="{'max-height':'550px', 'max-width':'500px'}">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Messages</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData>
+          <tr [pSelectableRow]="rowData">
+              <td>
+                  <app-message-item
+                  [message]="rowData"
+                  [index]="i"
+                ></app-message-item>
+              </td>
+          </tr>
+      </ng-template>
+  </p-table>
 </div>

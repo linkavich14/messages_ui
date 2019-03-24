@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DialogModule } from 'primeng/dialog';
+import { TableModule } from 'primeng/table';
 
 import { MessageContentComponent } from './message-content/message-content.component';
 import { MessagesComponent } from './messages.component';
@@ -35,7 +36,8 @@ import { MessageReplyComponent } from './message-content/message-reply/message-r
     MessagesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    DialogModule
+    DialogModule,
+    TableModule
   ]
 })
 export class MessagesModule {}

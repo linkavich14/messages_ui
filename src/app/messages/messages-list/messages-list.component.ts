@@ -15,6 +15,7 @@ export class MessagesListComponent implements OnInit, OnDestroy {
   messages: Message[];
   subscription: Subscription;
   id: number;
+  selectedMessage: Message;
 
   constructor(private messageService: MessageService, private router: Router,
               private route: ActivatedRoute) { }
